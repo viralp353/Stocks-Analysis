@@ -7,9 +7,9 @@
 ## Challenge
    I got Challenge for Analysis, I need  perform the same analysis of stocks in 2018, but  i need  a switch the nesting order of your for loops in order to run the analysis faster. After Analysis,Code is look like blow
    
-   Sub AllStockAnalysisRefactor()
+        Sub AllStockAnalysisRefactor()
 
-   '(1) Format  for worksheet
+       '(1) Format  for worksheet
    
         yearValue = InputBox("What year would you like to run the analysis on?")
         Worksheets("All Stocks Analysis Refactor").Activate
@@ -18,7 +18,7 @@
         Cells(3, 2).Value = "Total Daily Volume"
         Cells(3, 3).Value = "Return"
 
-   '(2) Array of all tickers
+       '(2) Array of all tickers
    
         Dim tickers(11) As String
    
@@ -35,7 +35,7 @@
         tickers(10) = "TERP"
         tickers(11) = "VSLR"
    
-   '(3)Arrays for starting price and ending price
+      '(3)Arrays for starting price and ending price
    
        Dim startingPrice(11) As Double
        Dim endingPrice(11) As Double
@@ -53,8 +53,9 @@
         
        Next i
     
-   '(4)loop through row
-       Worksheets(yearValue).Activate
+     '(4)loop through row
+        
+        Worksheets(yearValue).Activate
    
        RowCount = Cells(Rows.Count, "A").End(xlUp).Row
 
@@ -90,7 +91,7 @@
         Columns("B").AutoFit
         Columns("A").AutoFit
         
-    '(5)output data
+      '(5)output data
         For i = 0 To 11
         
         Cells(4 + i, 1).Value = tickers(i)
@@ -107,9 +108,9 @@
 
         End If
 
-       Next i
+        Next i
    
-End Sub
+       End Sub
 
 
 
